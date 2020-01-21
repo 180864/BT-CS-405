@@ -1,0 +1,35 @@
+#include<iostream> 
+using namespace std;
+class test
+{ public:
+	char a;
+	public:
+void getval(char x)
+{
+	x=a;
+}	
+		test operator +()
+		{
+			test c;
+			c.a= (int)a +2;
+			return c;
+		}
+		void display()
+{
+	cout<<"\n value of A  is : "<<a<<endl;
+}
+};
+
+
+int main()
+{
+	test obj;
+	cout<<"enter a character value : ";
+	cin.get(obj.a);
+	cout<<"value before overloading is : ";
+	obj.display();
+	obj=+obj;
+	cout<<"value after overloading is : ";
+	obj.display(); 
+	return 0;
+}
