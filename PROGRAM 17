@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+class sum
+{
+	int x,y;
+	public:
+		void getval(int a,int b)
+		{
+	this->x=a;
+	this->y=b;
+}
+		sum operator +(sum p)
+		{
+	sum d;
+	d.x=x+p.x;
+	d.y=y+p.y;
+	return d;
+     }
+		void display()
+		{
+	cout<<"a= "<< x<<endl;
+	cout<<"b= " <<y<<endl;
+          }
+};
+
+int main()
+{
+	int x1,x2,y1,y2;
+	sum a1,a2,a3;
+	cout<<"enter first point: " <<endl;
+	cin>>x1>>y1;
+	a1.getval(x1,y1);
+	cout<<"enter second point :" <<endl;
+	cin>>x2>>y2;
+	a2.getval(x2,y2);
+	a3=a1+a2;
+	a3.display();
+	return 0;
+}
