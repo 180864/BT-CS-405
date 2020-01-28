@@ -1,0 +1,25 @@
+/* program to calculate square of any number using inline functiom*/
+#include<iostream>
+using namespace std;
+class Calc
+{
+	int a;
+	public:
+		void getval(int b)
+		{
+			a=b;
+		}
+		inline void square(int s)
+		{
+			 cout<<"the square is:"<<s*s;
+		}
+};
+int main()
+{
+	int x;
+	Calc c;
+	cout<<"enter value of x : ";
+	cin>>x;
+	c.square(x);
+	return 0;
+}
