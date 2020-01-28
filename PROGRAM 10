@@ -1,0 +1,51 @@
+/* program for first and last name using string by 
+default constructor
+parametrised constructor
+copy constructor
+constructor overloading*/
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+class College
+{
+	string name1,name2;
+	public:
+		College()
+		{
+			name1="x";
+			name2="y";
+		}
+		College(string anu,string sheoran)
+		{
+			name1=anu;
+			name2=sheoran;
+		}
+		College(const College &c)
+		{
+			name1=c.name1;
+			name2=c.name2;
+		}
+		void display()
+		{
+			cout<<"first name is : "<<name1<<endl;
+			cout<<"second name is : "<<name2<<endl;
+		}
+};
+int main()
+{ string a,b;
+
+	cout<<"enter first and second name :  "<<endl;
+	cin>>a>>b;
+	College c; 
+	cout<<"using default constructor : "<<endl;
+	c.display();
+	cout<<"using parametrised constructor : "<<endl;
+	College c1(a,b);
+		c1.display(); 
+	cout<<"using copy constructor : "<<endl;
+	College c2(c1);
+
+	c2.display();
+	return 0;
+}
