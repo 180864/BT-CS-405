@@ -9,17 +9,20 @@ class Calc
 		{
 			a=b;
 		}
-		inline void square(int s)
+		inline int square(int s)
 		{
-			 cout<<"the square is:"<<s*s;
+			 return (s*s);
 		}
+		void display( int result)
+		{
+		cout<<"the square of given number is : "<<result<<endl;
 };
 int main()
 {
-	int x;
+	int x,result;
 	Calc c;
 	cout<<"enter value of x : ";
 	cin>>x;
-	c.square(x);
+	result=c.square(x);
 	return 0;
 }
