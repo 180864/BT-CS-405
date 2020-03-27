@@ -22,7 +22,7 @@ class Store
 				{
 					cout<<"greatest number is : "<<b<<endl;
 				}
-				else
+				else if(a>c&&a>b)
 				cout<<"greatest number is : "<<c<<endl;
 			}
 };
