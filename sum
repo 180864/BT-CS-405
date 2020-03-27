@@ -1,0 +1,32 @@
+//sum of two numbers//
+
+
+#include<iostream>
+using namespace std;
+class Student
+{
+	int a,b;
+	public:
+		void getdata()
+		{
+			cout<<"enter two numbers : "<<endl;
+			cin>>a>>b;
+		}
+		int sum(int a,int b)
+		{
+		return (a+b);
+		}
+		void display()
+		{
+			cout<<"sum of given numbers is : "<<a+b <<endl;
+		}
+};
+int main()
+{
+	Student s;
+	int a,b;
+	s.getdata();
+	s.sum(a,b);
+	s.display();
+	return 0;
+}
