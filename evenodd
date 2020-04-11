@@ -1,0 +1,28 @@
+//program to check whether number is odd or even//
+
+#include<iostream>
+using namespace std;
+class Break
+{ 
+int y;
+ public:
+ 	void get()
+ 	{
+ 		cout<<"enter value of number : "<<endl;
+         cin>>y;
+	 }
+	 int check()
+	 {
+	 	if(y%2==0)
+	 		cout<<y<<" is even number"<<endl;
+		 else 
+		 cout<<y<<" is odd number"<<endl;
+		 return 0;
+	 }
+};
+int main()
+{ Break b; 
+b.get();
+b.check();
+return 0;
+}
