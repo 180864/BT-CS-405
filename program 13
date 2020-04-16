@@ -1,0 +1,57 @@
+//multilevel inheritance //
+
+#include<iostream>
+using namespace std;
+class University
+{ protected:
+	int a;
+	public:
+		void putdata()
+		{
+		cout<<"enter value of a: "<<endl;
+		cin>>a;
+		}	
+};
+class Deptt:public University
+{ protected:
+int b;
+	public: 
+	int c;
+	void putval()
+	{
+	   cout<<"enter value of b : "<<endl;
+	   cin>>b;
+	}
+	int mul()
+	{
+		c=a*b; 
+		return c;
+	} 
+	void display()
+	{
+		cout<<"value of multiply is : "<<c<<endl;
+	}
+};
+class Branch:public Deptt //multilevel inheritance//
+{
+	public: int r;
+			void sum()
+			{  
+				r=a+b;
+			} 
+			void displayr()
+			{
+				cout<<"value of sum of a and b is: "<<r<<endl;
+			}
+};
+int  main()
+{ int x,y;
+	Branch d;
+	d.putdata();
+	d.putval();
+	d.mul();
+	d.display();
+	d.sum();
+	d.displayr();
+	return 0;
+}
