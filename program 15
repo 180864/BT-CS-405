@@ -1,0 +1,28 @@
+//containership//
+
+#include<iostream>
+using namespace std;
+class A
+{
+	public:
+		void display()
+		{
+			cout<<" this is first class"<<endl;
+		}
+};
+class B
+{
+	A a;
+	public:
+		void disp()
+		{
+			a.display();
+			cout<<" this is second class"<<endl;
+		}
+};
+int main()
+{
+	 B b;
+	 b.disp();
+	 return 0;
+}
